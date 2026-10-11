@@ -1,0 +1,22 @@
+name: Scientific verification
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: python -m pip install -r requirements.txt
+      - name: Verify mathematical and archived-result checks
+        run: |
+          python -m unittest test_study -v
+          python verify_reference.py
+          python verify_results.py
