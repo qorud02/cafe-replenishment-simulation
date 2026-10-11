@@ -9,3 +9,11 @@ date-released: 2026-10-11
 url: "https://github.com/qorud02/cafe-replenishment-simulation"
 license: MIT
 type: software
+preferred-citation:
+  type: article
+  title: "Pack sizes and expiry information in shared ingredient cafe replenishment"
+  authors:
+    - family-names: Bae
+      given-names: Kyunghan
+  year: 2026
+  doi: "10.5281/zenodo.23298824"
