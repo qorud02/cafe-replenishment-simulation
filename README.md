@@ -1,5 +1,7 @@
 # Shared ingredient cafe replenishment
 
+[한국어로 읽는 연구 결과](PLAIN_LANGUAGE_KO.md)
+
 A controlled simulation comparing pooled mean base stock, calibrated base stock and a deterministic mean-depletion expiry correction. Generated demand is used throughout.
 
 ## Reproduce
