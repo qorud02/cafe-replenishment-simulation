@@ -1,0 +1,8 @@
+{
+  "status": "passed",
+  "portable_execution": "2026-10-11",
+  "configs": 192,
+  "trajectories": 2304,
+  "metric_comparisons": 25344,
+  "max_absolute_difference": 0
+}

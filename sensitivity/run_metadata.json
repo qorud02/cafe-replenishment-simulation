@@ -1,0 +1,16 @@
+{
+  "protocol_sha256": "709181d362704a9a12a2127fc2e18806ec6c8b1f3db028b7279d7b02eb796c0c",
+  "python": "3.12.9",
+  "numpy": "2.3.5",
+  "elapsed_seconds": 172.71291489998112,
+  "scenarios": 8,
+  "validation_replications": 30,
+  "evaluation_replications": 200,
+  "measured_days": 1095,
+  "burn_in_days": 180,
+  "validation_seed": 2026101103,
+  "evaluation_seed": 2026101104,
+  "improved_point_estimates": 8,
+  "lower_pointwise_ci": 8,
+  "higher_pointwise_ci": 0
+}

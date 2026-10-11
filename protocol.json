@@ -1,0 +1,85 @@
+{
+  "title": "Pack sizes and expiry information in shared-ingredient cafe replenishment",
+  "frozen_before_experiments": "2026-10-11",
+  "question": "How does a simple expiry-adjusted order-up-to rule compare with equally calibrated pooled base-stock replenishment when pack size, shelf life and shared daily demand-factor variability vary?",
+  "simulation_only": true,
+  "quantity_unit_ml": 50,
+  "menu_mean_counts": [
+    18,
+    12,
+    8
+  ],
+  "recipe_units": [
+    4,
+    5,
+    6
+  ],
+  "weekday_multipliers": [
+    0.8,
+    0.9,
+    0.95,
+    1,
+    1.2,
+    1.4,
+    0.75
+  ],
+  "common_factor_cv": [
+    0,
+    0.35,
+    0.7
+  ],
+  "pack_units": [
+    20,
+    60,
+    120
+  ],
+  "shelf_life_days": [
+    2,
+    3,
+    5
+  ],
+  "lead_time_days": 1,
+  "review_interval_days": 1,
+  "purchase_cost_krw_per_unit": 100,
+  "holding_cost_krw_per_unit_day": 0.25,
+  "shortage_penalty_purchase_cost_ratio": [
+    3,
+    10
+  ],
+  "disposal_fee": 0,
+  "z_grid": [
+    -1,
+    -0.5,
+    0,
+    0.5,
+    1,
+    1.5,
+    2,
+    2.5,
+    3
+  ],
+  "validation_replications": 30,
+  "evaluation_replications": 200,
+  "burn_in_days": 90,
+  "measurement_days": 365,
+  "validation_seed": 2026101101,
+  "evaluation_seed": 2026101102,
+  "forecast": "True conditional weekday mean and variance; no realized future demand is supplied to a policy.",
+  "policies": [
+    "mean_base_stock",
+    "calibrated_base_stock",
+    "expiry_adjusted_base_stock"
+  ],
+  "calibration": "Select z separately for each scenario and policy by mean validation cost. Break ties by lower z. Evaluation paths are disjoint.",
+  "inference": "Paired differences across 200 independent evaluation replications. Pointwise two-sided 95% Student-t intervals. No population-of-stores inference and no simultaneous 54-cell claim.",
+  "objective": "Order commitments + unmet ingredient quantity penalty + closing inventory holding cost. Acquisition cost of expired stock is already included in order commitments. Outstanding end-of-horizon orders are included and reported separately.",
+  "event_order": [
+    "receive yesterday's order",
+    "place order for tomorrow",
+    "serve demand FIFO",
+    "expire remaining life-one stock",
+    "age remaining stock"
+  ],
+  "sensitivity": "Use preselected small/large packs, shortest/longest shelf life and largest demand factor CV; repeat for 1095 measurement days with 180 burn-in days using new seeds.",
+  "claims": "Controlled simulation comparison; no field outcome, optimal-policy claim or first-in-literature claim. Shortage and fill rate refer to ingredient volume."
+}

@@ -1,0 +1,47 @@
+{
+  "status": "passed",
+  "t_critical_199": 1.9719565442517357,
+  "summaries": {
+    "boundary-sensitivity": {
+      "scenario_rows": 22,
+      "replicate_rows": 4400,
+      "pair_rows": 11,
+      "calibration_rows": 286,
+      "negative": 6,
+      "positive": 0,
+      "zero": 5,
+      "ci_below_zero": 1,
+      "ci_above_zero": 0,
+      "selected_grid_boundary": 0,
+      "boundary_cells": []
+    }
+  },
+  "maximum_absolute_differences": {
+    "rawcost": 7.275957614183426e-12,
+    "rawserved+unmet": 2.842170943040401e-14,
+    "rawfill": 2.220446049250313e-16,
+    "scenario_daily_cost_krw": 3.637978807091713e-12,
+    "scenario_cost_ci_low": 6.548361852765083e-11,
+    "scenario_cost_ci_high": 6.548361852765083e-11,
+    "scenario_cost_mc_se": 3.552713678800501e-15,
+    "scenario_fill_rate": 1.1102230246251565e-16,
+    "scenario_orders_per_day": 1.1102230246251565e-16,
+    "scenario_purchased_liters_per_day": 1.7763568394002505e-15,
+    "scenario_expired_liters_per_day": 1.3877787807814457e-17,
+    "scenario_unmet_liters_per_day": 8.673617379884035e-19,
+    "scenario_inventory_liters_per_day": 3.552713678800501e-15,
+    "paired_demand": 0,
+    "paired_cost_difference_krw": 0,
+    "paired_ci_low": 4.558131649901043e-12,
+    "paired_ci_high": 4.558575739110893e-12,
+    "paired_mc_se": 2.220446049250313e-16,
+    "paired_percent": 0,
+    "paired_fill_rate_difference": 0,
+    "paired_fill_ci_low": 2.82841241747156e-17,
+    "paired_fill_ci_high": 2.82841241747156e-17,
+    "paired_expired_liters_difference": 3.3881317890172014e-21,
+    "paired_expired_ci_low": 1.9062984697726382e-16,
+    "paired_expired_ci_high": 1.9062984697726382e-16
+  },
+  "errors": []
+}
